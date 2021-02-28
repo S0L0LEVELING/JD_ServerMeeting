@@ -2,7 +2,6 @@
 
 <h4 align="center">
 	<a href="https://github.com/JokeDevil/JD_ServerMeeting/releases/latest" title=""><img alt="Licence" src="https://img.shields.io/github/release/JokeDevil/JD_ServerMeeting.svg"></a>
-	<a href="LICENSE" title=""><img alt="Licence" src="https://img.shields.io/github/license/JokeDevil/JD_ServerMeeting.svg"></a>
 	<a href="https://discord.gg/m4BvmkG" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
 </h4>
 
