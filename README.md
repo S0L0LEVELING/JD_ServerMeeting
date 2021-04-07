@@ -6,7 +6,7 @@
 </h4>
 
 <h4 align="center">
-This is a server log script for FiveM, which is used to log certain actions that are being made in the server.
+This is a server meeting script for FiveM, which is used to hold a meeting in the server with all players.
 </h5>
 
 ### Requirements
