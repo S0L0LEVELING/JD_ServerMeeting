@@ -4,7 +4,10 @@ Config.MeetingPerm = 'jd.meeting'                                           -- T
 Config.AcePerm = 'jd.staff'                                                 -- This permission is needed to bypass player restrictions.
 
 
-Config.SpawnPoint = 404.86, -964.78, -99.00                                 -- Spawn point for meeting start
+Config.SpawnPoint = {404.86, -964.78, -99.00}                               -- Spawn point for meeting start
+Config.StaffSpawnPoint = {405.52, -978.10, -99.00}                          -- Spawn point for meeting start
+Config.ChatPrefix = "JD_Meeting"
+
 Config.Zone = {                                                             -- Zone Players need to be in
     {409.12, -967.77, -99.00},
     {409.12, -961.99, -99.00},
@@ -17,4 +20,4 @@ Config.Logs = false                                                         -- S
 Config.LogsChannel = "meeting"
 Config.LogsColor = "#000000"
 
-Config.versionCheck = "1.0.0"
+Config.versionCheck = "1.0.1"

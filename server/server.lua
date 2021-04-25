@@ -11,15 +11,13 @@ RegisterCommand('meeting', function(source, args, rawCommand)
 				end
 				isMeeting = false
 				local countdown = args[1]
-				TriggerClientEvent('chat:addMessage', -1, { color = { 255, 0, 0}, multiline = true, args = {"^*^5[JD_Meeting]^0^r", "A Server Meeting will ^2^*start^0^r in ^1".. math.floor(tonumber(countdown)) .." seconds^0."}})
 				while true do
 					Citizen.Wait(0)
-					if countdown ~= 1 then
-						Citizen.Wait(1000)
-						countdown = countdown - 1
+					if countdown ~= 0 then
 						TriggerClientEvent('chat:addMessage', -1, { color = { 255, 0, 0}, multiline = true, args = {"^*^5[JD_Meeting]^0^r", "A Server Meeting will ^2^*start^0^r in ^1".. math.floor(tonumber(countdown)) .." seconds^0."}})
-					else 
+						countdown = countdown - 1
 						Citizen.Wait(1000)
+					else 
 						TriggerClientEvent('chat:addMessage', -1, { color = { 255, 0, 0}, multiline = true, args = {"^*^5[JD_Meeting]^0^r", "Meeting will ^2^*start^0^r now."}})
 						TriggerClientEvent('beginMeeting', -1)
 						return
@@ -31,15 +29,13 @@ RegisterCommand('meeting', function(source, args, rawCommand)
 				end
 				isMeeting = true
 				local countdown = args[1]
-				TriggerClientEvent('chat:addMessage', -1, { color = { 255, 0, 0}, multiline = true, args = {"^*^5[JD_Meeting]^0^r", "The Server Meeting will ^1^*end^0^r in ^1".. math.floor(tonumber(countdown)) .." seconds^0."}})
 				while true do
 					Citizen.Wait(0)
-					if countdown ~= 1 then
-						Citizen.Wait(1000)
-						countdown = countdown -1
+					if countdown ~= 0 then
 						TriggerClientEvent('chat:addMessage', -1, { color = { 255, 0, 0}, multiline = true, args = {"^*^5[JD_Meeting]^0^r", "The Server Meeting will ^1^*end^0^r in ^1".. math.floor(tonumber(countdown)) .." seconds^0."}})
-					else 
+						countdown = countdown -1
 						Citizen.Wait(1000)
+					else 
 						TriggerClientEvent('chat:addMessage', -1, { color = { 255, 0, 0}, multiline = true, args = {"^*^5[JD_Meeting]^0^r", "Meeting will ^1^*end^0^r now."}})
 						TriggerClientEvent('endMeeting', -1)
 						return
@@ -72,7 +68,7 @@ Citizen.CreateThread(
 		if vRaw and Config.versionCheck then
 			local v = json.decode(vRaw)
 			PerformHttpRequest(
-				'https://raw.githubusercontent.com/JokeDevil/JD_ServerMeeting/master/version.json',
+				'https://raw.githubusercontent.com/prefech/JD_ServerMeeting/master/version.json',
 				function(code, res, headers)
 					if code == 200 then
 						local rv = json.decode(res)

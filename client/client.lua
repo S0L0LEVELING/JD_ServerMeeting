@@ -1,7 +1,11 @@
 local a, b, c = nil
-local x, y, z = 404.86, -964.78, -99.00
+local x, y, z = table.unpack(Config.SpawnPoint)
+local x2, y2, z2 = table.unpack(Config.StaffSpawnPoint)
 local allowed = false
 local meetingRunning = false
+
+print(table.unpack(Config.SpawnPoint))
+print(table.unpack(Config.StaffSpawnPoint))
 
 function insidePolygon( point)
   local oddNodes = false
@@ -45,7 +49,7 @@ Citizen.CreateThread(function()
     if not allowed then
       SetEntityCoords(GetPlayerPed(-1), x, y, z, 0, 0, 0, false)
     else
-      SetEntityCoords(GetPlayerPed(-1), 405.52, -978.10, -99.00, 0, 0, 0, false)
+      SetEntityCoords(GetPlayerPed(-1), x2, y2, z2, 0, 0, 0, false)
     end
     while true do
       Citizen.Wait(0)
