@@ -2,8 +2,10 @@
 
 <h4 align="center">
 	<a href="https://github.com/JokeDevil/JD_ServerMeeting/releases/latest" title=""><img alt="Licence" src="https://img.shields.io/github/release/JokeDevil/JD_ServerMeeting.svg"></a>
-	<a href="https://discord.gg/m4BvmkG" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
+	<a href="https://discord.gg/qyPdHzDKmb" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
 </h4>
+
+https://discord.gg/qyPdHzDKmb
 
 <h4 align="center">
 This is a server meeting script for FiveM, which is used to hold a meeting in the server with all players.
@@ -32,4 +34,4 @@ After the meeting they will be teleported back.
 ensure JD_ServerMeeting
 ```
 
-### My Discord: https://discord.gg/m4BvmkG
+### My Discord: https://discord.gg/qyPdHzDKmb
